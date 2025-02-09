@@ -1,0 +1,8 @@
+﻿<maui:MauiWinUIApplication
+    x:Class="Sofia_s_Ladybugs.WinUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maui="using:Microsoft.Maui"
+    xmlns:local="using:Sofia_s_Ladybugs.WinUI">
+
+</maui:MauiWinUIApplication>
