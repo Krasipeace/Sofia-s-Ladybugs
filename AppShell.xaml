@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Sofia_s_Ladybugs"
     Shell.FlyoutBehavior="Flyout"
-    Title="Sofia_s_Ladybugs">
+    Title="Калинките на София">
 
     <ShellContent
         Title="Начало"
