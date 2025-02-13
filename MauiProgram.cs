@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.Maui.LifecycleEvents;
 
 namespace Sofia_s_Ladybugs
 {
@@ -12,8 +13,6 @@ namespace Sofia_s_Ladybugs
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("bulgarian.otf", "Bulgarian");
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
 #if DEBUG

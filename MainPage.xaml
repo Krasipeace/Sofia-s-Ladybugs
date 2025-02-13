@@ -17,7 +17,7 @@
                 IsVisible="True">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer 
-                        Tapped="OnTapGestureRecognizerTapped"
+                        Tapped="OnTapGestureRecognizerTappedMainPageImage"
                         NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
@@ -31,7 +31,7 @@
                 IsVisible="False">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer 
-                            Tapped="OnTapGestureRecognizerTapped"
+                            Tapped="OnTapGestureRecognizerTappedMainPageImage"
                             NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>

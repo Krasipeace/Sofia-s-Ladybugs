@@ -8,5 +8,7 @@
             Text="This will be the page where the game will be played"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        
+        
     </VerticalStackLayout>
 </ContentPage>
