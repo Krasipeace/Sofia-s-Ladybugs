@@ -5,11 +5,18 @@
 
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
-            
+
+            <Label
+                Text="Събери всички калинки"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="28"
+                SemanticProperties.Description="Събери всички калинки" />
+
             <Image
                 x:Name="LadybugImage1"
                 Source="ladybug1.png"
-                HeightRequest="185"
+                HeightRequest="150"
                 Aspect="AspectFit"
                 SemanticProperties.Description="ladybug image"
                 IsVisible="True">
@@ -23,7 +30,7 @@
             <Image
                 x:Name="LadybugImage2"
                 Source="ladybug2.png"
-                HeightRequest="185"
+                HeightRequest="150"
                 Aspect="AspectFit"
                 SemanticProperties.Description="ladybug image"
                 IsVisible="False">
@@ -34,20 +41,20 @@
                 </Image.GestureRecognizers>
             </Image>
 
-            <Label
-                Text="Събери всички калинки"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                SemanticProperties.Description="Събери всички калинки" />
+            <Button
+                x:Name="LettersChoice"
+                Text="Букви"
+                FontSize="24"
+                Clicked="OnLettersChoiceButtonClicked"
+                SemanticProperties.Description="Игра с Букви" />
 
             <Button
-                x:Name="NewGameButton"
-                Text="Започни игра"
-                FontSize="36"
-                Clicked="OnNewGameButtonClicked"
-                SemanticProperties.Description="Започни игра" />
-
+                x:Name="NumbersChoice"
+                Text="Числа"
+                FontSize="24"
+                Clicked="OnNumbersChoiceButtonClicked"
+                SemanticProperties.Description="Игра с Числа" />
+                
         </VerticalStackLayout>
     </ScrollView>
 
