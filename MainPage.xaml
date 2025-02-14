@@ -4,9 +4,7 @@
              x:Class="Sofia_s_Ladybugs.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <VerticalStackLayout Padding="30,0" Spacing="25">
             
             <Image
                 x:Name="LadybugImage1"
