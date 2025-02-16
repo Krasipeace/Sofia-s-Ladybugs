@@ -2,24 +2,26 @@
 
 public partial class GamePage : ContentPage
 {
-    private bool findingMatch = false;
+    private const int VictoryCondition = 12;
+    private bool isMatch = false;
     private int matchesFound = 0;
     private Button? lastClicked;
-    private readonly Dictionary<Button, string> buttonChoices = [];
     private readonly string defaultButton = "🐞";
+    private readonly Dictionary<Button, string> buttonChoices = [];
 
     public GamePage(List<string> gameType)
     {
         InitializeComponent();
 
         GameButtons.IsVisible = true;
+        VictoryMessage.IsVisible = false;
 
         foreach (var button in GameButtons.Children.OfType<Button>())
         {
             int index = Random.Shared.Next(gameType.Count);
             string choice = gameType[index];
             buttonChoices[button] = choice;
-            button.Text = defaultButton; 
+            button.Text = defaultButton;
             gameType.RemoveAt(index);
         }
     }
@@ -34,14 +36,14 @@ public partial class GamePage : ContentPage
         if (sender is Button clickedButton)
         {
             if (clickedButton.Text != defaultButton)
-                return; 
+                return;
 
-            clickedButton.Text = buttonChoices[clickedButton]; 
+            clickedButton.Text = buttonChoices[clickedButton];
 
-            if (!findingMatch)
+            if (!isMatch)
             {
                 lastClicked = clickedButton;
-                findingMatch = true;
+                isMatch = true;
             }
             else
             {
@@ -64,11 +66,16 @@ public partial class GamePage : ContentPage
                     clickedButton.BackgroundColor = Colors.LightBlue;
                     lastClicked.BackgroundColor = Colors.LightBlue;
                 }
-                findingMatch = false;
+
+                isMatch = false;
             }
 
-            if (matchesFound == 8)
+            if (matchesFound == VictoryCondition)
             {
+                GameButtons.IsVisible = false;
+                VictoryMessage.IsVisible = true;
+
+                await Task.Delay(5000);
                 await Navigation.PushAsync(new MainPage());
                 Navigation.RemovePage(this);
             }

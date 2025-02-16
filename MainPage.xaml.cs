@@ -21,45 +21,28 @@
         }
 
         /// <summary>
-        /// Redirects the user to GamePage(characters).
+        /// Redirects the user to GamePage(clothes).
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private async void OnLettersChoiceButtonClicked(object sender, EventArgs e)
+        private async void OnClothesChoiceButtonClicked(object sender, EventArgs e)
         {
-            List<string> characters = [
-                "A", "A",
-                "B", "B",
-                "C", "C",
-                "D", "D",
-                "E", "E",
-                "F", "F",
-                "G", "G",
-                "H", "H"
+            List<string> clothes = [
+                "🥼", "🥼",
+                "🧦", "🧦",
+                "👗", "👗",
+                "👒", "👒",
+                "🥿", "🥿",
+                "👟", "👟",
+                "🧣", "🧣",
+                "🧤", "🧤",
+                "🧥", "🧥",
+                "🥻", "🥻",
+                "👕", "👕",
+                "👖", "👖"
             ];
 
-            await Navigation.PushAsync(new GamePage(characters));
-        }
-
-        /// <summary>
-        /// Redirects the user to GamePage(numbers).
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private async void OnNumbersChoiceButtonClicked(object sender, EventArgs e)
-        {
-            List<string> numbers = [
-                "1", "1",
-                "2", "2",
-                "3", "3",
-                "4", "4",
-                "5", "5",
-                "6", "6",
-                "7", "7",
-                "8", "8"
-            ];
-
-            await Navigation.PushAsync(new GamePage(numbers));
+            await Navigation.PushAsync(new GamePage(clothes));
         }
     }
 }

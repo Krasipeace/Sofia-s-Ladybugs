@@ -455,8 +455,8 @@
         <Setter Property="FontSize">
             <Setter.Value>
                 <OnPlatform x:TypeArguments="x:Double">
-                    <On Platform="Android">50</On>
-                    <On Platform="WinUI">60</On>
+                    <On Platform="Android">40</On>
+                    <On Platform="WinUI">50</On>
                 </OnPlatform>
             </Setter.Value>
         </Setter>

@@ -54,7 +54,41 @@
                 <Button 
                     Style="{StaticResource GameButtonStyle}"
                     Clicked="Button_Clicked" />
+                <Button 
+                    Style="{StaticResource GameButtonStyle}"
+                    Clicked="Button_Clicked" />
+                <Button 
+                    Style="{StaticResource GameButtonStyle}"
+                    Clicked="Button_Clicked" />
+                <Button 
+                    Style="{StaticResource GameButtonStyle}"
+                    Clicked="Button_Clicked" />
+                <Button 
+                    Style="{StaticResource GameButtonStyle}"
+                    Clicked="Button_Clicked" />
+                <Button 
+                    Style="{StaticResource GameButtonStyle}"
+                    Clicked="Button_Clicked" />
+                <Button 
+                    Style="{StaticResource GameButtonStyle}"
+                    Clicked="Button_Clicked" />
+                <Button 
+                    Style="{StaticResource GameButtonStyle}"
+                    Clicked="Button_Clicked" />
+                <Button 
+                    Style="{StaticResource GameButtonStyle}"
+                    Clicked="Button_Clicked" />
+
             </FlexLayout>
+
+            <Label 
+                Padding="100"
+                x:Name="VictoryMessage"
+                SemanticProperties.HeadingLevel="Level1"
+                Style="{StaticResource Headline}"
+                Text="Браво, ти успя да събереш всички калинки!"
+                IsVisible="false"/>
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -42,19 +42,12 @@
             </Image>
 
             <Button
-                x:Name="LettersChoice"
-                Text="Букви"
+                x:Name="ClothesChoice"
+                Text="Дрехи"
                 FontSize="24"
-                Clicked="OnLettersChoiceButtonClicked"
-                SemanticProperties.Description="Игра с Букви" />
+                Clicked="OnClothesChoiceButtonClicked"
+                SemanticProperties.Description="Игра с Облекла" />
 
-            <Button
-                x:Name="NumbersChoice"
-                Text="Числа"
-                FontSize="24"
-                Clicked="OnNumbersChoiceButtonClicked"
-                SemanticProperties.Description="Игра с Числа" />
-                
         </VerticalStackLayout>
     </ScrollView>
 
