@@ -18,7 +18,7 @@
                         NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
-            
+
             <Image
                 x:Name="LadybugImage2"
                 Source="ladybug2.png"
@@ -28,11 +28,11 @@
                 IsVisible="False">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer 
-                            Tapped="OnTapGestureRecognizerTappedMainPageImage"
-                            NumberOfTapsRequired="1" />
+                        Tapped="OnTapGestureRecognizerTappedMainPageImage"
+                        NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
-            
+
             <Label
                 Text="Избери тема"
                 Style="{StaticResource SubHeadline}"
@@ -40,40 +40,60 @@
                 FontSize="28"
                 SemanticProperties.Description="Избери тема" />
 
-            <Button
-                x:Name="ClothesChoice"
-                Text="Дрехи"
-                FontSize="24"
-                Clicked="OnClothesChoiceButtonClicked"
-                SemanticProperties.Description="Игра с облекла" />
+            <HorizontalStackLayout Padding="10,0" Spacing="10">
+                <Button
+                    x:Name="ClothesChoice"
+                    Text="Дрехи"
+                    FontSize="24"
+                    Clicked="OnClothesChoiceButtonClicked"
+                    SemanticProperties.Description="Игра с облекла" />
 
-            <Button
-                x:Name="AnimalsChoice"
-                Text="Животни"
-                FontSize="24"
-                Clicked="OnAnimalsChoiceButtonClicked"
-                SemanticProperties.Description="Игра с животни" />
+                <Button
+                    x:Name="AnimalsChoice"
+                    Text="Животни"
+                    FontSize="24"
+                    Clicked="OnAnimalsChoiceButtonClicked"
+                    SemanticProperties.Description="Игра с животни" />
 
-            <Button
-                x:Name="FruitsChoice"
-                Text="Плодове"
-                FontSize="24"
-                Clicked="OnFruitsChoiceButtonClicked"
-                SemanticProperties.Description="Игра с плодове" />
+                <Button
+                    x:Name="MusicChoice"
+                    Text="Музика"
+                    FontSize="24"
+                    Clicked="OnMusicChoiceButtonClicked"
+                    SemanticProperties.Description="Игра с музика" />
+            </HorizontalStackLayout>
 
-            <Button
-                x:Name="VegetablesChoice"
-                Text="Зеленчуци"
-                FontSize="24"
-                Clicked="OnVegetablesChoiceButtonClicked"
-                SemanticProperties.Description="Игра със зеленчуци" />
+            <HorizontalStackLayout Padding="10,0" Spacing="10">
+                <Button
+                    x:Name="FruitsChoice"
+                    Text="Плодове"
+                    FontSize="24"
+                    Clicked="OnFruitsChoiceButtonClicked"
+                    SemanticProperties.Description="Игра с плодове" />
 
-            <Button
-                x:Name="MusicChoice"
-                Text="Музика"
-                FontSize="24"
-                Clicked="OnMusicChoiceButtonClicked"
-                SemanticProperties.Description="Игра с музика" />
+                <Button
+                    x:Name="VegetablesChoice"
+                    Text="Зеленчуци"
+                    FontSize="24"
+                    Clicked="OnVegetablesChoiceButtonClicked"
+                    SemanticProperties.Description="Игра със зеленчуци" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Padding="10,0" Spacing="10">
+                <Button 
+                    x:Name="BuildingsChoice"
+                    Text="Сгради"
+                    FontSize="24"
+                    Clicked="OnBuildingsChoiceButtonClicked"
+                    SemanticProperties.Description="Игра със сгради" />
+
+                <Button 
+                    x:Name="FoodsChoice"
+                    Text="Храна"
+                    FontSize="24"
+                    Clicked="OnFoodsChoiceButtonClicked"
+                    SemanticProperties.Description="Игра с храна" />
+            </HorizontalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>

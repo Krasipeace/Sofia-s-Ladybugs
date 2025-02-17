@@ -81,6 +81,30 @@
         }
 
         /// <summary>
+        /// Redirects the user to MediumGamePage(buildings).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void OnBuildingsChoiceButtonClicked(object sender, EventArgs e)
+        {
+            var buildings = GetEmojiList(["🏠", "🏭", "🏗", "🏘", "🏢", "🏬", "🏣", "🏤", "🏥", "🏦", "🏪", "🏫", "🏛", "⛪️", "🕌", "🕍", "🛕", "🏡", "🏯", "🏰" ]);
+
+            await Navigation.PushAsync(new MediumGamePage(buildings));
+        }
+
+        /// <summary>
+        /// Redirects the user to MediumGamePage(foods).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void OnFoodsChoiceButtonClicked(object sender, EventArgs e)
+        {
+            var foods = GetEmojiList(["🍞", "🧀", "🍳", "🌭", "🍔", "🍕", "🍣", "🥣", "🍩", "🍿", "🍫", "🍬", "🍭", "🍮", "🥮", "🍨", "🍰", "🧆", "🍯", "🥗"]);
+
+            await Navigation.PushAsync(new MediumGamePage(foods));
+        }
+
+        /// <summary>
         /// Returns a list of emojis, each repeated twice.
         /// </summary>
         /// <param name="emojis">Array of emojis to be repeated.</param>
