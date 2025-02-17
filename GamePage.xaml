@@ -78,7 +78,6 @@
                 <Button 
                     Style="{StaticResource GameButtonStyle}"
                     Clicked="Button_Clicked" />
-
             </FlexLayout>
 
             <Label 
@@ -88,7 +87,6 @@
                 Style="{StaticResource Headline}"
                 Text="Браво, ти успя да събереш всички калинки!"
                 IsVisible="false"/>
-            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -3,10 +3,10 @@
 public partial class GamePage : ContentPage
 {
     private const int VictoryCondition = 12;
+    private const string DefaultButton = "🐞";
     private bool isMatch = false;
     private int matchesFound = 0;
     private Button? lastClicked;
-    private readonly string defaultButton = "🐞";
     private readonly Dictionary<Button, string> buttonChoices = [];
 
     public GamePage(List<string> gameType)
@@ -21,13 +21,13 @@ public partial class GamePage : ContentPage
             int index = Random.Shared.Next(gameType.Count);
             string choice = gameType[index];
             buttonChoices[button] = choice;
-            button.Text = defaultButton;
+            button.Text = DefaultButton;
             gameType.RemoveAt(index);
         }
     }
 
     /// <summary>
-    /// Handles the button click event to reveal objType and check for matches.
+    /// Handles the button click event to reveal clickedButton and check for matches.
     /// </summary>
     /// <param name="sender">The button that was clicked.</param>
     /// <param name="e">Event arguments.</param>
@@ -35,7 +35,7 @@ public partial class GamePage : ContentPage
     {
         if (sender is Button clickedButton)
         {
-            if (clickedButton.Text != defaultButton)
+            if (clickedButton.Text != DefaultButton)
                 return;
 
             clickedButton.Text = buttonChoices[clickedButton];
@@ -61,8 +61,8 @@ public partial class GamePage : ContentPage
                 else
                 {
                     await Task.Delay(200);
-                    clickedButton.Text = defaultButton;
-                    lastClicked!.Text = defaultButton;
+                    clickedButton.Text = DefaultButton;
+                    lastClicked!.Text = DefaultButton;
                     clickedButton.BackgroundColor = Colors.LightBlue;
                     lastClicked.BackgroundColor = Colors.LightBlue;
                 }

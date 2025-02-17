@@ -5,14 +5,6 @@
 
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
-
-            <Label
-                Text="Събери всички калинки"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="28"
-                SemanticProperties.Description="Събери всички калинки" />
-
             <Image
                 x:Name="LadybugImage1"
                 Source="ladybug1.png"
@@ -26,7 +18,7 @@
                         NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
-
+            
             <Image
                 x:Name="LadybugImage2"
                 Source="ladybug2.png"
@@ -40,13 +32,48 @@
                             NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
+            
+            <Label
+                Text="Избери тема"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="28"
+                SemanticProperties.Description="Избери тема" />
 
             <Button
                 x:Name="ClothesChoice"
                 Text="Дрехи"
                 FontSize="24"
                 Clicked="OnClothesChoiceButtonClicked"
-                SemanticProperties.Description="Игра с Облекла" />
+                SemanticProperties.Description="Игра с облекла" />
+
+            <Button
+                x:Name="AnimalsChoice"
+                Text="Животни"
+                FontSize="24"
+                Clicked="OnAnimalsChoiceButtonClicked"
+                SemanticProperties.Description="Игра с животни" />
+
+            <Button
+                x:Name="FruitsChoice"
+                Text="Плодове"
+                FontSize="24"
+                Clicked="OnFruitsChoiceButtonClicked"
+                SemanticProperties.Description="Игра с плодове" />
+
+            <Button
+                x:Name="VegetablesChoice"
+                Text="Зеленчуци"
+                FontSize="24"
+                Clicked="OnVegetablesChoiceButtonClicked"
+                SemanticProperties.Description="Игра със зеленчуци" />
+
+            <Button
+                x:Name="MusicChoice"
+                Text="Музика"
+                FontSize="24"
+                Clicked="OnMusicChoiceButtonClicked"
+                SemanticProperties.Description="Игра с музика" />
 
         </VerticalStackLayout>
     </ScrollView>

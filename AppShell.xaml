@@ -8,7 +8,7 @@
     Title="Калинките на София">
 
     <ShellContent
-        Title="Избор на игра"
+        Title="Нова игра"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
