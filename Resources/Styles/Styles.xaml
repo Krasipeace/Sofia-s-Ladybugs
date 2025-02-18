@@ -508,4 +508,34 @@
         </Setter>
     </Style>
 
+    <Style x:Key="HardGameButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="LightBlue"/>
+        <Setter Property="BorderColor" Value="Black"/>
+        <Setter Property="BorderWidth" Value="1"/>
+        <Setter Property="FontSize">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android">20</On>
+                    <On Platform="WinUI">24</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android">50</On>
+                    <On Platform="WinUI">60</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="WidthRequest">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android">50</On>
+                    <On Platform="WinUI">60</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

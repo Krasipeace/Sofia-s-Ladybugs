@@ -48,7 +48,7 @@ public partial class GamePage : ContentPage
             else
             {
                 if (clickedButton == lastClicked)
-                    return; // Same button clicked twice
+                    return;
 
                 if (buttonChoices[clickedButton] == buttonChoices[lastClicked!])
                 {

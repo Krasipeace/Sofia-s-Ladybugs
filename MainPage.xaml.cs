@@ -87,7 +87,10 @@
         /// <param name="e"></param>
         private async void OnBuildingsChoiceButtonClicked(object sender, EventArgs e)
         {
-            var buildings = GetEmojiList(["🏠", "🏭", "🏗", "🏘", "🏢", "🏬", "🏣", "🏤", "🏥", "🏦", "🏪", "🏫", "🏛", "⛪️", "🕌", "🕍", "🛕", "🏡", "🏯", "🏰" ]);
+            var buildings = GetEmojiList([
+                "🏠", "🏭", "🏗", "🏘", "🏢", "🏬", "🏣", "🏤", "🏥", "🏦",
+                "🏪", "🏫", "🏛", "⛪️", "🕌", "🕍", "🛕", "🏡", "🏯", "🏰" 
+            ]);
 
             await Navigation.PushAsync(new MediumGamePage(buildings));
         }
@@ -99,9 +102,28 @@
         /// <param name="e"></param>
         private async void OnFoodsChoiceButtonClicked(object sender, EventArgs e)
         {
-            var foods = GetEmojiList(["🍞", "🧀", "🍳", "🌭", "🍔", "🍕", "🍣", "🥣", "🍩", "🍿", "🍫", "🍬", "🍭", "🍮", "🥮", "🍨", "🍰", "🧆", "🍯", "🥗"]);
+            var foods = GetEmojiList([
+                "🍞", "🧀", "🍳", "🌭", "🍔", "🍕", "🍣", "🥣", "🍩", "🍿", 
+                "🍫", "🍬", "🍭", "🍮", "🥮", "🍨", "🍰", "🧆", "🍯", "🥗"
+            ]);
 
             await Navigation.PushAsync(new MediumGamePage(foods));
+        }
+
+        /// <summary>
+        /// Redirects the user to HardGamePage(vehicles).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private async void OnVehiclesChoiceButtonClicked(object sender, EventArgs args)
+        {
+            var vehicles = GetEmojiList([
+                "🚗", "🚕", "🚙", "🚌", "🚎", "🏎", "🚓", "🚑", "🚒", "🚐",
+                "🚚", "🚛", "🚜", "🛴", "🚲", "🛵", "🛺", "🚠", "🚟", "🚃",
+                "🚋", "🚝", "🚄", "🚅", "🚈", "✈️", "🚁", "🛥", "🚢", "⛵️"
+            ]);
+
+            await Navigation.PushAsync(new HardGamePage(vehicles));
         }
 
         /// <summary>

@@ -40,7 +40,7 @@
                 FontSize="28"
                 SemanticProperties.Description="Избери тема" />
 
-            <HorizontalStackLayout Padding="10,0" Spacing="10">
+            <HorizontalStackLayout Padding="10,0" Spacing="10" HorizontalOptions="Center">
                 <Button
                     x:Name="ClothesChoice"
                     Text="Дрехи"
@@ -63,7 +63,7 @@
                     SemanticProperties.Description="Игра с музика" />
             </HorizontalStackLayout>
 
-            <HorizontalStackLayout Padding="10,0" Spacing="10">
+            <HorizontalStackLayout Padding="10,0" Spacing="10" HorizontalOptions="Center" >
                 <Button
                     x:Name="FruitsChoice"
                     Text="Плодове"
@@ -79,7 +79,7 @@
                     SemanticProperties.Description="Игра със зеленчуци" />
             </HorizontalStackLayout>
 
-            <HorizontalStackLayout Padding="10,0" Spacing="10">
+            <HorizontalStackLayout Padding="10,0" Spacing="10" HorizontalOptions="Center">
                 <Button 
                     x:Name="BuildingsChoice"
                     Text="Сгради"
@@ -93,6 +93,16 @@
                     FontSize="24"
                     Clicked="OnFoodsChoiceButtonClicked"
                     SemanticProperties.Description="Игра с храна" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Padding="10,0" Spacing="10" HorizontalOptions="Center">
+                <Button 
+                    x:Name="VehiclesChoice"
+                    Text="Превозни средства"
+                    FontSize="24"
+                    Clicked="OnVehiclesChoiceButtonClicked"
+                    SemanticProperties.Description="Игра с превозни средства" />
+
             </HorizontalStackLayout>
 
         </VerticalStackLayout>

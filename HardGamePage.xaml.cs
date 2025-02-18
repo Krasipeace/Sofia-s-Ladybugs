@@ -1,15 +1,15 @@
 ﻿namespace Sofia_s_Ladybugs;
 
-public partial class MediumGamePage : ContentPage
+public partial class HardGamePage : ContentPage
 {
-	private const int VictoryCondition = 20;
+    private const int VictoryCondition = 30;
     private const string DefaultButton = "🐞";
     private bool isMatch = false;
     private int matchesFound = 0;
     private Button? lastClicked;
     private readonly Dictionary<Button, string> buttonChoices = [];
 
-    public MediumGamePage(List<string> gameType)
+    public HardGamePage(List<string> gameType)
     {
         InitializeComponent();
 
