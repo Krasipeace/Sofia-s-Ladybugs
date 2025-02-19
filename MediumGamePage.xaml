@@ -136,7 +136,7 @@
                 x:Name="VictoryMessage"
                 SemanticProperties.HeadingLevel="Level1"
                 Style="{StaticResource Headline}"
-                Text="Браво, ти успя да събереш всички калинки!"
+                Text=" "
                 IsVisible="false" />
         </VerticalStackLayout>
     </ScrollView>

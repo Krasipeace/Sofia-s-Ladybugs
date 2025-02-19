@@ -39,7 +39,7 @@ namespace Sofia_s_Ladybugs.WinUI
             WindowHandler.Mapper.AppendToMapping(nameof(IWindow), (handler, view) =>
             {
                 var width = 500;
-                var height = 720;
+                var height = 740;
 
                 var nativeWindow = handler.PlatformView;
                 nativeWindow.Activate();

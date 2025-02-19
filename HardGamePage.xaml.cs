@@ -6,6 +6,7 @@ public partial class HardGamePage : ContentPage
     private const string DefaultButton = "🐞";
     private bool isMatch = false;
     private int matchesFound = 0;
+    private int attempts = 0;
     private Button? lastClicked;
     private readonly Dictionary<Button, string> buttonChoices = [];
 
@@ -57,6 +58,7 @@ public partial class HardGamePage : ContentPage
                     lastClicked.BackgroundColor = Colors.Green;
                     clickedButton.BackgroundColor = Colors.Green;
                     matchesFound++;
+                    attempts++;
                 }
                 else
                 {
@@ -65,6 +67,7 @@ public partial class HardGamePage : ContentPage
                     lastClicked!.Text = DefaultButton;
                     clickedButton.BackgroundColor = Colors.LightBlue;
                     lastClicked.BackgroundColor = Colors.LightBlue;
+                    attempts++;
                 }
 
                 isMatch = false;
@@ -73,6 +76,7 @@ public partial class HardGamePage : ContentPage
             if (matchesFound == VictoryCondition)
             {
                 GameButtons.IsVisible = false;
+                VictoryMessage.Text = $"Браво, ти успя да събереш всички калинки след {attempts} опита.";
                 VictoryMessage.IsVisible = true;
 
                 await Task.Delay(5000);
