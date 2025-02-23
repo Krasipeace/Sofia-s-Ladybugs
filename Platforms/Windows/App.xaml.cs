@@ -1,4 +1,4 @@
-﻿using Microsoft.Maui.Handlers;
+using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
@@ -51,7 +51,7 @@ namespace Sofia_s_Ladybugs.WinUI
                 double screenWidth = DeviceDisplay.MainDisplayInfo.Width;
                 double screenHeight = DeviceDisplay.MainDisplayInfo.Height;
 
-                appWindow.MoveAndResize(new RectInt32((int)(screenWidth / 2 - width / 2), (int)(screenHeight / 2 - height / 2), width, height));
+                appWindow.MoveAndResize(new RectInt32((int)((screenWidth / 2) - (width / 2)), (int)((screenHeight / 2) - (height / 2)), width, height));
 
                 var titleBar = handler.PlatformView.GetAppWindow();
                 if (titleBar != null)
