@@ -34,55 +34,51 @@ public partial class MediumGamePage : ContentPage
     /// <param name="e">Event arguments.</param>
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        if (sender is Button clickedButton)
+        if (sender is not Button clickedButton || clickedButton.Text != DefaultButton)
+            return;
+
+        clickedButton.Text = buttonChoices[clickedButton];
+
+        if (!isMatch)
         {
-            if (clickedButton.Text != DefaultButton)
+            lastClicked = clickedButton;
+            isMatch = true;
+        }
+        else
+        {
+            if (clickedButton == lastClicked)
                 return;
 
-            clickedButton.Text = buttonChoices[clickedButton];
+            await Task.Delay(250);
 
-            if (!isMatch)
+            if (buttonChoices[clickedButton] == buttonChoices[lastClicked!])
             {
-                lastClicked = clickedButton;
-                isMatch = true;
+                lastClicked!.Text = clickedButton.Text = " ";
+                lastClicked.BackgroundColor = Colors.Green;
+                clickedButton.BackgroundColor = Colors.Green;
+                matchesFound++;
             }
             else
             {
-                if (clickedButton == lastClicked)
-                    return;
-
-                if (buttonChoices[clickedButton] == buttonChoices[lastClicked!])
-                {
-                    await Task.Delay(250);
-                    lastClicked!.Text = clickedButton.Text = " ";
-                    lastClicked.BackgroundColor = Colors.Green;
-                    clickedButton.BackgroundColor = Colors.Green;
-                    matchesFound++;
-                    attempts++;
-                }
-                else
-                {
-                    await Task.Delay(250);
-                    clickedButton.Text = DefaultButton;
-                    lastClicked!.Text = DefaultButton;
-                    clickedButton.BackgroundColor = Colors.LightBlue;
-                    lastClicked.BackgroundColor = Colors.LightBlue;
-                    attempts++;
-                }
-
-                isMatch = false;
+                clickedButton.Text = DefaultButton;
+                lastClicked!.Text = DefaultButton;
+                clickedButton.BackgroundColor = Colors.LightBlue;
+                lastClicked.BackgroundColor = Colors.LightBlue;
             }
 
-            if (matchesFound == VictoryCondition)
-            {
-                GameButtons.IsVisible = false;
-                VictoryMessage.Text = $"Браво, ти успя да събереш всички калинки след {attempts} опита.";
-                VictoryMessage.IsVisible = true;
+            attempts++;
+            isMatch = false;
+        }
 
-                await Task.Delay(5000);
-                await Navigation.PushAsync(new MainPage());
-                Navigation.RemovePage(this);
-            }
+        if (matchesFound == VictoryCondition)
+        {
+            GameButtons.IsVisible = false;
+            VictoryMessage.Text = $"Браво, ти успя да събереш всички калинки след {attempts} опита.";
+            VictoryMessage.IsVisible = true;
+
+            await Task.Delay(5000);
+            await Navigation.PushAsync(new MainPage());
+            Navigation.RemovePage(this);
         }
     }
 }

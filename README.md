@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/krasipeace/sofia-s-ladybugs/badge)](https://www.codefactor.io/repository/github/krasipeace/sofia-s-ladybugs)
+
 # Sofia-s-Ladybugs
 
 
