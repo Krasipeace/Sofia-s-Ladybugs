@@ -1,4 +1,4 @@
-name: Build .Net MAUI winOS App
+name: winOS-build
 
 on:
   push:
