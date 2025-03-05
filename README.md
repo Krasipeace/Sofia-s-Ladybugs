@@ -1,8 +1,8 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/krasipeace/sofia-s-ladybugs/badge)](https://www.codefactor.io/repository/github/krasipeace/sofia-s-ladybugs) [![android-build](https://github.com/Krasipeace/Sofia-s-Ladybugs/actions/workflows/android-build.yml/badge.svg)](https://github.com/Krasipeace/Sofia-s-Ladybugs/actions/workflows/android-build.yml) 
+[![CodeFactor](https://www.codefactor.io/repository/github/krasipeace/sofia-s-ladybugs/badge)](https://www.codefactor.io/repository/github/krasipeace/sofia-s-ladybugs) [![android-build](https://github.com/Krasipeace/Sofia-s-Ladybugs/actions/workflows/android-build.yml/badge.svg)](https://github.com/Krasipeace/Sofia-s-Ladybugs/actions/workflows/android-build.yml) [![winOS-build](https://github.com/Krasipeace/Sofia-s-Ladybugs/actions/workflows/windows-build.yml/badge.svg)](https://github.com/Krasipeace/Sofia-s-Ladybugs/actions/workflows/windows-build.yml)
 
 # Sofia-s-Ladybugs
 
-
+Simple Memory game with 3 difficulties, build for Windows and Android.
 
 ## Images 
 
