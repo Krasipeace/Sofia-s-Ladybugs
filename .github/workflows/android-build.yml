@@ -1,0 +1,26 @@
+name: android-build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 9.0.x
+    - name: Install .Net MAUI
+      run: dotnet workload install maiu
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build Sofia-s-Ladybugs.csproj -c Release -f net9.0-android --no-restore
+
